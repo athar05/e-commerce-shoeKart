@@ -7,6 +7,11 @@ function CartReducer(cartState, action) {
         ...cartState,
         cart: [...cartState.cart, { ...action.payload, qty: 1 }],
       };
+    case "REMOVE_FROM_CART":
+      return {
+        ...cartState,
+        cart: cartState.cart.filter((prod) => prod.id !== action.payload.id),
+      };
   }
 }
 

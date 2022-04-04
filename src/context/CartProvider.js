@@ -12,8 +12,6 @@ function CartProvider({ children }) {
     cart: [],
   });
 
-  console.log(cartState);
-
   return (
     <CartContext.Provider value={{ cartState, cartDispatch }}>
       {children}

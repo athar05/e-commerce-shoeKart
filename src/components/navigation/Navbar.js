@@ -48,7 +48,7 @@ function Navbar(props) {
           </figure>
         </Link>
 
-        <figure class="avatar avatar-sm">
+        <figure className="avatar avatar-sm">
           <img src="/assets/images/avataaars.png" alt="" />
         </figure>
       </div>

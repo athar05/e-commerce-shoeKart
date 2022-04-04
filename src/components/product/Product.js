@@ -77,13 +77,10 @@ function Product({ products }) {
                 <button
                   className="button button-icon"
                   onClick={() =>
-                    cartDispatch(
-                      {
-                        type: "ADD_TO_CART",
-                        payload: prod,
-                      },
-                      console.log(cart)
-                    )
+                    cartDispatch({
+                      type: "ADD_TO_CART",
+                      payload: prod,
+                    })
                   }
                 >
                   <i className="fa-solid fa-heart"></i>
