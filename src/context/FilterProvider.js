@@ -11,7 +11,13 @@ function FilterProvider({ children }) {
     byStock: false,
     byRating: 0,
     bySort: "",
-    byBrand: "",
+    // byBrand: "",
+    byBrand: {
+      adidas: false,
+      nike: false,
+      converse: false,
+      puma: false,
+    },
   });
 
   return (
