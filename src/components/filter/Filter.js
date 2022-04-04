@@ -6,6 +6,7 @@ function Filter() {
     filterState: { byStock, byRating, sortBy, byBrand },
     filterDispatch,
   } = useFilter();
+  const { adidas, nike, puma, converse } = byBrand;
 
   return (
     <div>
@@ -66,52 +67,58 @@ function Filter() {
                   <li className="text-md text-primary">
                     <input
                       type="checkbox"
-                      onChange={() =>
-                        filterDispatch({
-                          type: "FILTER_BY_BRAND",
-                          payload: "Adidas",
-                        })
+                      value="adidas"
+                      // value={"adidas" || ""}
+                      onChange={
+                        () =>
+                          filterDispatch({
+                            type: "SHOW_ADIDAS",
+                          })
+                        // console.log("input handler")
                       }
-                      checked={byBrand === "Adidas"}
+                      checked={adidas}
                     />{" "}
                     Adidas
                   </li>
                   <li className="text-md text-primary">
                     <input
                       type="checkbox"
+                      value="nike"
+                      // value={"nike" || ""}
                       onChange={() =>
                         filterDispatch({
-                          type: "FILTER_BY_BRAND",
-                          payload: "Nike",
+                          type: "SHOW_NIKE",
                         })
                       }
-                      checked={byBrand === "Nike"}
+                      checked={nike}
                     />{" "}
                     Nike
                   </li>
                   <li className="text-md text-primary">
                     <input
                       type="checkbox"
+                      value="converse"
+                      // value={"converse" || ""}
                       onChange={() =>
                         filterDispatch({
-                          type: "FILTER_BY_BRAND",
-                          payload: "Converse",
+                          type: "SHOW_CONVERSE",
                         })
                       }
-                      checked={byBrand === "Converse"}
+                      checked={converse}
                     />{" "}
                     Converse
                   </li>
                   <li className="text-md text-primary">
                     <input
                       type="checkbox"
+                      value="puma"
+                      // value={"puma" || ""}
                       onChange={() =>
                         filterDispatch({
-                          type: "FILTER_BY_BRAND",
-                          payload: "Puma",
+                          type: "SHOW_PUMA",
                         })
                       }
-                      checked={byBrand === "Puma"}
+                      checked={puma}
                     />{" "}
                     Puma
                   </li>

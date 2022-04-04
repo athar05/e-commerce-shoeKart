@@ -6,6 +6,12 @@ const FilterContext = createContext({
   byStock: false,
   byRating: 0,
   sortBy: "",
-  byBrand: "",
+  // byBrand: "",
+  byBrand: {
+    adidas: false,
+    nike: false,
+    converse: false,
+    puma: false,
+  },
 });
 export default FilterContext;
