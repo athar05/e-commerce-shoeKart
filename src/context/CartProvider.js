@@ -10,6 +10,7 @@ function CartProvider({ children }) {
   const [cartState, cartDispatch] = useReducer(CartReducer, {
     products: products,
     cart: [],
+    wishlist: [],
   });
 
   return (

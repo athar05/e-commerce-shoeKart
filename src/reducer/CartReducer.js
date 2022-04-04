@@ -12,6 +12,18 @@ function CartReducer(cartState, action) {
         ...cartState,
         cart: cartState.cart.filter((prod) => prod.id !== action.payload.id),
       };
+    case "ADD_TO_WISHLIST":
+      return {
+        ...cartState,
+        wishlist: [...cartState.wishlist, { ...action.payload }],
+      };
+    case "MOVE_TO_WISHLIST":
+      return {
+        ...cartState,
+        // copied from cart reducer
+        cart: cartState.cart.filter((prod) => prod.id !== action.payload.id),
+        wishlist: [...cartState.wishlist, { ...action.payload }],
+      };
   }
 }
 
