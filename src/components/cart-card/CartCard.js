@@ -65,7 +65,7 @@ function CartCard() {
                 }
               >
                 {" "}
-                <i className="fa-solid fa-cart-shopping"></i>
+                <i className="fa fa-trash"></i>
                 Remove From Cart
               </button>
               <button
