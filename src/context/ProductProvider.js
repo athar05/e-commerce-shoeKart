@@ -1,12 +1,12 @@
 import React, { useContext, useReducer } from "react";
 import { products } from "../backend/db/products";
 import ProductContext from "./ProductContext";
-import products from "../backend/db/products";
+import ProductReducer from "../reducer/ProductReducer";
 // import CartReducer from "../reducer/CartReducer";
 
 const useProduct = () => useContext(ProductContext);
 
-function ProductProvider() {
+function ProductProvider({ children }) {
   const [productState, productDispatch] = useReducer(ProductReducer, {
     products: products,
     cart: [],

@@ -76,7 +76,7 @@ export const products = [
     id: uuid(),
     name: "Pacer Styx IDP High Risk Performance Sports Shoes",
     brand: "Puma",
-    price: "2,474",
+    price: "2474",
     img: "assets/images/puma.jpg",
     categoryName: "Bestseller",
     inStock: true,

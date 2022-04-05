@@ -1,19 +1,16 @@
 import React from "react";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navigation/Navbar";
-import { useCart } from "../../context/CartProvider";
+import { useProduct } from "../../context/ProductProvider";
 import CartCard from "../../components/cart-card/CartCard";
 import PricingCard from "../../components/pricing-card/PricingCard";
 
 const Cart = () => {
   const {
-    cartState: { cart },
-    // cartState: { [] },
-  } = useCart();
+    productState: { cart, wishlist },
+  } = useProduct();
 
-  let cartProducts = { cart };
-
-  console.log("Caaaartttt.js", cartProducts);
+  const { productState } = useProduct();
 
   return (
     <div className="cart-parent">

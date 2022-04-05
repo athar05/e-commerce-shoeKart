@@ -1,14 +1,20 @@
 import React from "react";
-import { useCart } from "../../context/CartProvider";
-import { useWishlist } from "../../context/WishlistProvider";
+// import { useCart } from "../../context/CartProvider";
+import { useProduct } from "../../context/ProductProvider";
+// import { useWishlist } from "../../context/WishlistProvider";
 
 function CartCard() {
-  const {
-    cartState: { cart },
-    cartDispatch,
-  } = useCart();
+  // const {
+  //   cartState: { cart },
+  //   cartDispatch,
+  // } = useCart();
 
-  const { wishlistState, wishlistDispatch } = useWishlist();
+  // const { wishlistState, wishlistDispatch } = useWishlist();
+
+  const {
+    productState: { cart, wishlist },
+    productDispatch,
+  } = useProduct();
 
   return (
     <div>
@@ -27,18 +33,35 @@ function CartCard() {
             <p>
               ₹1299 <strike className="card-strk">₹{prod.price}</strike>
             </p>
-            <p className="text-md text-grey">50% off</p>
 
-            <div className="card-quantity">
-              <button>+</button>
-              <span>1</span>
-              <button>-</button>
+            <div className="card-quantity" style={{ padding: "0.5rem 0" }}>
+              <button
+                onClick={() => {
+                  // console.log("Clicked");
+                  productDispatch({
+                    type: "INCREMENT_QTY",
+                    payload: prod,
+                  });
+                }}
+              >
+                +
+              </button>
+              <span style={{ padding: "0 0.5rem", margin: "0 0.5rem" }}>
+                {prod.qty}
+              </span>
+              <button
+                onClick={() =>
+                  productDispatch({ type: "DECREMENT_QTY", payload: prod })
+                }
+              >
+                -
+              </button>
             </div>
             <div className="card-buttons">
               <button
                 className="button button-icon button-primary"
                 onClick={() =>
-                  cartDispatch({ type: "REMOVE_FROM_CART", payload: prod })
+                  productDispatch({ type: "REMOVE_FROM_CART", payload: prod })
                 }
               >
                 {" "}
@@ -48,7 +71,7 @@ function CartCard() {
               <button
                 className="button button-icon button-primary"
                 onClick={() =>
-                  wishlistDispatch({
+                  productDispatch({
                     type: "MOVE_TO_WISHLIST",
                     payload: prod,
                   })

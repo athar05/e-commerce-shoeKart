@@ -1,7 +1,7 @@
 import React, { createContext } from "react";
 import { products } from "../backend/db/products";
 
-const CartContext = createContext({
+const ProductContext = createContext({
   products: products,
   cart: [],
   wishlist: [],

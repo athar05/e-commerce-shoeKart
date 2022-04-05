@@ -3,21 +3,27 @@ import { useCart } from "../../context/CartProvider";
 import { useWishlist } from "../../context/WishlistProvider";
 import { useFilter } from "../../context/FilterProvider";
 import { Link } from "react-router-dom";
+import { useProduct } from "../../context/ProductProvider";
 
 function Product({ products }) {
-  const {
-    cartState: { cart },
-    cartDispatch,
-  } = useCart();
+  // const {
+  //   cartState: { cart },
+  //   cartDispatch,
+  // } = useCart();
 
-  const {
-    wishlistState: { wishlist },
-    wishlistDispatch,
-  } = useWishlist();
+  // const {
+  //   wishlistState: { wishlist },
+  //   wishlistDispatch,
+  // } = useWishlist();
 
   const {
     filterState: { product, sortBy, byStock, byRating, byBrand },
   } = useFilter();
+
+  const {
+    productState: { cart, wishlist },
+    productDispatch,
+  } = useProduct();
 
   const filteredProducts = () => {
     let sortedProducts = product;
@@ -77,7 +83,7 @@ function Product({ products }) {
                 <button
                   className="button button-icon"
                   onClick={() =>
-                    cartDispatch({
+                    productDispatch({
                       type: "ADD_TO_CART",
                       payload: prod,
                     })
@@ -99,7 +105,7 @@ function Product({ products }) {
                 <button
                   className="button button-icon"
                   onClick={() =>
-                    wishlistDispatch({
+                    productDispatch({
                       type: "ADD_TO_WISHLIST",
                       payload: prod,
                     })
