@@ -37,7 +37,6 @@ function CartCard() {
             <div className="card-quantity" style={{ padding: "0.5rem 0" }}>
               <button
                 onClick={() => {
-                  // console.log("Clicked");
                   productDispatch({
                     type: "INCREMENT_QTY",
                     payload: prod,
@@ -59,6 +58,7 @@ function CartCard() {
             </div>
             <div className="card-buttons">
               <button
+                style={{ backgroundColor: "var(--primary)" }}
                 className="button button-icon button-primary"
                 onClick={() =>
                   productDispatch({ type: "REMOVE_FROM_CART", payload: prod })
@@ -69,6 +69,7 @@ function CartCard() {
                 Remove From Cart
               </button>
               <button
+                style={{ backgroundColor: "var(--primary)" }}
                 className="button button-icon button-primary"
                 onClick={() =>
                   productDispatch({
