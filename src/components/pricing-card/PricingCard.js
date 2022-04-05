@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useCart } from "../../context/CartProvider";
+import { useProduct } from "../../context/ProductProvider";
 
 function PricingCard() {
   const {
-    cartState: { cart },
-    cartDispatch,
-  } = useCart();
+    productState: { cart },
+    productDispatch,
+  } = useProduct();
 
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
+    setTotal(
+      cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0)
+    );
   }, [cart]);
 
   return (

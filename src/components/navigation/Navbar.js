@@ -1,17 +1,23 @@
 import React, { useContext } from "react";
-import { useCart } from "../../context/CartProvider";
-import { useWishlist } from "../../context/WishlistProvider";
+// import { useCart } from "../../context/CartProvider";
+// import { useWishlist } from "../../context/WishlistProvider";
+import { useProduct } from "../../context/ProductProvider";
 import { Link } from "react-router-dom";
 
 function Navbar(props) {
+  // const {
+  //   cartState: { cart },
+  //   cartDispatch,
+  // } = useCart();
+  // const {
+  //   wishlistState: { wishlist },
+  //   wishlistDispatch,
+  // } = useWishlist();
+
   const {
-    cartState: { cart },
-    cartDispatch,
-  } = useCart();
-  const {
-    wishlistState: { wishlist },
-    wishlistDispatch,
-  } = useWishlist();
+    productState: { cart, wishlist },
+    productDispatch,
+  } = useProduct();
   return (
     <div className="nav">
       <div className="nav-left">
