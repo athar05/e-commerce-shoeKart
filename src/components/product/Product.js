@@ -1,21 +1,9 @@
 import React from "react";
-import { useCart } from "../../context/CartProvider";
-import { useWishlist } from "../../context/WishlistProvider";
 import { useFilter } from "../../context/FilterProvider";
 import { Link } from "react-router-dom";
 import { useProduct } from "../../context/ProductProvider";
 
 function Product({ products }) {
-  // const {
-  //   cartState: { cart },
-  //   cartDispatch,
-  // } = useCart();
-
-  // const {
-  //   wishlistState: { wishlist },
-  //   wishlistDispatch,
-  // } = useWishlist();
-
   const {
     filterState: { product, sortBy, byStock, byRating, byBrand },
   } = useFilter();
