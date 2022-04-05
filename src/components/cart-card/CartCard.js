@@ -1,16 +1,7 @@
 import React from "react";
-// import { useCart } from "../../context/CartProvider";
 import { useProduct } from "../../context/ProductProvider";
-// import { useWishlist } from "../../context/WishlistProvider";
 
 function CartCard() {
-  // const {
-  //   cartState: { cart },
-  //   cartDispatch,
-  // } = useCart();
-
-  // const { wishlistState, wishlistDispatch } = useWishlist();
-
   const {
     productState: { cart, wishlist },
     productDispatch,

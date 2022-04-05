@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import { useCart } from "../../context/CartProvider";
 import { useProduct } from "../../context/ProductProvider";
 
 function PricingCard() {
-  // const {
-  //   cartState: { cart },
-  //   cartDispatch,
-  // } = useCart();
-
   const {
     productState: { cart },
     productDispatch,
