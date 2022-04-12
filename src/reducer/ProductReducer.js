@@ -21,6 +21,21 @@ function ProductReducer(productState, action) {
         cart: productState.cart.filter((prod) => prod.id !== action.payload.id),
         wishlist: [...productState.wishlist, { ...action.payload }],
       };
+    case "MOVE_TO_CART":
+      return {
+        ...productState,
+        cart: [...productState.cart, { ...action.payload, qty: 1 }],
+        wishlist: productState.wishlist.filter(
+          (prod) => prod.id !== action.payload.id
+        ),
+      };
+    case "REMOVE_FROM_WISHLIST":
+      return {
+        ...productState,
+        wishlist: productState.wishlist.filter(
+          (prod) => prod.id !== action.payload.id
+        ),
+      };
     case "INCREMENT_QTY":
       return {
         ...productState,
