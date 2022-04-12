@@ -8,6 +8,7 @@ function Product({ products }) {
     filterState: { product, sortBy, byStock, byRating, byBrand },
   } = useFilter();
 
+
   const {
     productState: { cart, wishlist },
     productDispatch,
@@ -25,13 +26,31 @@ function Product({ products }) {
       sortedProducts = sortedProducts.filter((prod) => prod.inStock);
     }
 
-    if (byBrand) {
-      console.log("byBrandddddd", byBrand);
-      sortedProducts = sortedProducts.filter((prod) => prod.brand === byBrand);
+    if (byBrand.adidas) {
+      return sortedProducts.filter(
+        (prod) => "adidas" === prod.brand.toLowerCase()
+      );
+    }
+
+    if (byBrand.nike) {
+      return sortedProducts.filter(
+        (prod) => "nike" === prod.brand.toLowerCase()
+      );
+    }
+
+    if (byBrand.puma) {
+      return sortedProducts.filter(
+        (prod) => "puma" === prod.brand.toLowerCase()
+      );
+    }
+
+    if (byBrand.converse) {
+      return sortedProducts.filter(
+        (prod) => "converse" === prod.brand.toLowerCase()
+      );
     }
 
     if (byRating) {
-      console.log(byRating);
       sortedProducts = sortedProducts.filter(
         (prod) => prod.rating === byRating
       );
