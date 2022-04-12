@@ -22,7 +22,7 @@ function CartCard() {
             <h2>{prod.name}</h2>
             <p>{prod.brand}</p>
             <p>
-              ₹1299 <strike className="card-strk">₹{prod.price}</strike>
+              ₹{prod.price} <strike className="card-strk">₹1299</strike>
             </p>
 
             <div className="card-quantity" style={{ padding: "0.5rem 0" }}>

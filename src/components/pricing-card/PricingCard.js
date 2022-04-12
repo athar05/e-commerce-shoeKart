@@ -55,11 +55,6 @@ function PricingCard() {
             <p className="text-md-lg text-bold">₹{total}</p>
           </div>
         </div>
-        <div className="savings-info">
-          <p className="text-md-lg text-bold align-center">
-            You will save ₹499 on this order{" "}
-          </p>
-        </div>
         <div className="place-order-botton">
           <div className="button button-icon" disabled={cart.length === 0}>
             {" "}
