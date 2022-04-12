@@ -99,8 +99,52 @@ code {
 }
 .pricing-col {
   grid-area: pricing-col;
-  /* background-color: var(--primary); */
-} /* - END internals of the cart page - */
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  border: 1px solid var(--secondary);
+  align-items: space-between;
+}
+
+.pricing-calculations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.pricing-card .pricing-heading {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-calculations-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing-card .pricing-total {
+  width: 100%;
+}
+
+.pricing-total .pricing-total-content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.pricing-card-header-details {
+  display: flex;
+  flex: 2 1 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* background-color: var(--primary); */
+/* - END internals of the cart page - */
 
 /* START jugaad wishlist layout */
 .wishlist-parent {
