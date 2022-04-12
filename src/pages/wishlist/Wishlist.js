@@ -12,10 +12,7 @@ function Wishlist() {
       <div className="wishlist-content">
         <h1>Wishlist</h1>
         <h3>Here is everything you want... but can't afford!</h3>
-        <div className="grid grid-4">
-          {" "}
-          <WishlistCard />
-        </div>
+        <WishlistCard />
       </div>
       <div className="footer">
         <Footer />

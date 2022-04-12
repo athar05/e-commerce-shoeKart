@@ -7,7 +7,7 @@ function WishlistCard() {
     productDispatch,
   } = useProduct();
   return (
-    <div>
+    <div className="grid grid-4">
       {wishlist.map((prod) => (
         <div className="card" key={prod.id}>
           <div className="card-image-with-dismiss">
