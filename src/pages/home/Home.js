@@ -13,7 +13,6 @@ const Home = () => {
       </div>
       <div className="body">
         <div className="body-container">
-          {" "}
           <HomeHero />
           <HomeButton />
           <HomeCategoriesCard />

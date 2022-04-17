@@ -1,14 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function HomeButton() {
   return (
     <div>
-      <a href="./product-listing.html">
-        <div className="button button-icon">
-          {" "}
-          <span> Shop Now </span>{" "}
-        </div>
-      </a>
+      <div className="button button-icon">
+        <Link to="/products">
+          <span> Shop Now </span>
+        </Link>
+      </div>
     </div>
   );
 }
