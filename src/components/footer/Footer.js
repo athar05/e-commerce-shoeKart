@@ -8,7 +8,6 @@ function Footer() {
           <div className="footer-about-company">
             <h3 className="h3 text-primary">shoeKart</h3>
             <p className="text-md ">
-              {" "}
               Shop exclusive coverse footwear from shoeKart. Our primary focus
               is designing and manufacturing the highest quality footwear,
               specializing in skateboarding shoes, snowboarding boots,
@@ -32,7 +31,6 @@ function Footer() {
             <h4 className="h4">Contact Us</h4>
             <ul className="unordered-list">
               <li>
-                {" "}
                 <i className="fa-solid fa-location-check"></i>
                 Main St Follansbee, West Virginia(WV), 26037
               </li>

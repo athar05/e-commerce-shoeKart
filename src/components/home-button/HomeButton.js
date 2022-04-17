@@ -5,8 +5,7 @@ function HomeButton() {
     <div>
       <a href="./product-listing.html">
         <div className="button button-icon">
-          {" "}
-          <span> Shop Now </span>{" "}
+          <span> Shop Now </span>
         </div>
       </a>
     </div>

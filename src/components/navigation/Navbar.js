@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { useCart } from "../../context/CartProvider";
-import { useWishlist } from "../../context/WishlistProvider";
+import { useCart } from "/context/CartProvider";
+import { useWishlist } from "/context/WishlistProvider";
 import { Link } from "react-router-dom";
 
 function Navbar(props) {
@@ -16,7 +16,6 @@ function Navbar(props) {
     <div className="nav">
       <div className="nav-left">
         <Link to="/">
-          {" "}
           <img
             className="hero-logo"
             src="/assets/images/running-shoes.png"
@@ -27,7 +26,6 @@ function Navbar(props) {
         <input className="search-bar" type="text" placeholder="Search.." />
         <a href="./logout.html">
           <div className="button button-icon button-header">
-            {" "}
             <span> Logout </span>
           </div>
         </a>

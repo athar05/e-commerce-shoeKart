@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../../components/navigation/Navbar";
-import HomeHero from "../../components/home-hero/HomeHero";
-import HomeButton from "../../components/home-button/HomeButton";
-import HomeCategoriesCard from "../../components/home-categories-card/HomeCategoriesCard";
-import Footer from "../../components/footer/Footer";
+import Navbar from "/components/navigation/Navbar";
+import HomeHero from "/components/home-hero/HomeHero";
+import HomeButton from "/components/home-button/HomeButton";
+import HomeCategoriesCard from "/components/home-categories-card/HomeCategoriesCard";
+import Footer from "/components/footer/Footer";
 
 const Home = () => {
   return (
@@ -13,7 +13,6 @@ const Home = () => {
       </div>
       <div className="body">
         <div className="body-container">
-          {" "}
           <HomeHero />
           <HomeButton />
           <HomeCategoriesCard />

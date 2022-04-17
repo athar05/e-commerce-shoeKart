@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../../components/navigation/Navbar";
+import Navbar from "/components/navigation/Navbar";
 // import Product from "../product/Product.js";
-import Footer from "../../components/footer/Footer";
+import Footer from "/components/footer/Footer";
 
 function Wishlist() {
   return (

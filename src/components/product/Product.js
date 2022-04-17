@@ -1,7 +1,7 @@
 import React from "react";
-import { useCart } from "../../context/CartProvider";
-import { useWishlist } from "../../context/WishlistProvider";
-import { useFilter } from "../../context/FilterProvider";
+import { useCart } from "/context/CartProvider";
+import { useWishlist } from "/context/WishlistProvider";
+import { useFilter } from "/context/FilterProvider";
 import { Link } from "react-router-dom";
 
 function Product({ products }) {
@@ -89,11 +89,10 @@ function Product({ products }) {
             <div className="card-buttons">
               {cart.some((p) => p.id === prod.id) ? (
                 <Link to="/cart">
-                  {" "}
                   <button className="button button-icon">
                     <i className="fa-solid fa-cart-shopping"></i>
                     Go To Cart
-                  </button>{" "}
+                  </button>
                 </Link>
               ) : (
                 <button
@@ -114,7 +113,6 @@ function Product({ products }) {
               )}
               {wishlist.some((p) => p.id === prod.id) ? (
                 <Link to="/wishlist">
-                  {" "}
                   <button className="button button-icon">
                     <i className="fa-solid fa-heart"></i>
                     Go To Wishlist
@@ -130,10 +128,9 @@ function Product({ products }) {
                     })
                   }
                 >
-                  {" "}
                   <i className="fa-solid fa-bag-shopping"></i>Add To Wishlist
                 </button>
-              )}{" "}
+              )}
             </div>
           ) : (
             <div>OUT OF STOCK </div>
