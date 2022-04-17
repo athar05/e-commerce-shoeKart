@@ -178,6 +178,75 @@ code {
 /* - END internals of the wishlist page - */
 
 /* END jugaad wishlist layout */
+/* START Login page */
+.login-parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 80px 70vh 200px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header header"
+    "body body body body"
+    "footer footer footer footer";
+}
+.login-parent .header {
+  grid-area: header;
+  width: 100%;
+}
+
+.login-parent .body {
+  grid-area: body;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.login-parent .login-section {
+  font: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.5rem 0;
+  width: 100%;
+  border: 1px solid var(--primary);
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.login-parent .footer {
+  grid-area: footer;
+  background-color: var(--footer-bg);
+  width: 100%;
+}
+
+.login-section .button.button-icon.login-button {
+  width: 50%;
+  margin: auto;
+}
+
+.login-section .input.login-input-password {
+  padding: 0 0;
+  margin: 0 0;
+  position: relative;
+}
+
+.login-section .login-signup {
+  margin: 0.75rem 0;
+}
+
+#toggle-password-login {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+}
+
+#toggle-password-login:hover {
+  cursor: pointer;
+}
+/* END Login page */
 
 /* Start Home Page */
 .hero-overlay-text {
@@ -252,6 +321,7 @@ code {
   border-radius: 0.5rem;
 }
 /* End Home Page */
+
 /* START MEDIA QUERIES */
 /* M - Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
