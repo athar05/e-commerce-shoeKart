@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function LoginComponent() {
   return (
@@ -14,11 +15,10 @@ function LoginComponent() {
             <i className="fa-solid fa-eye-slash" id="toggle-password-login"></i>
           </div>
           <div className="button button-icon login-button">
-            {" "}
-            <span> Log In </span>{" "}
+            <span> Log In </span>
           </div>
           <p className="login-signup">
-            Not A Member Yet?<a href="./signup.html"> Signup</a> instead.
+            Not A Member Yet?<Link to="#"> Signup</Link> instead.
           </p>
         </form>
       </section>
