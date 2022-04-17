@@ -16,9 +16,9 @@ function WishlistCard() {
               alt="{prod.name}"
               style={{ maxHeight: "15rem", maxWidth: "15rem" }}
             />
-            <figure>
+            {/* <figure>
               <i className="fa-solid fa-xmark"></i>
-            </figure>
+            </figure> */}
             <div className="card-description">
               <h2>{prod.name}</h2>
               <div className="card-product-details">
@@ -38,7 +38,7 @@ function WishlistCard() {
                   }
                 >
                   {" "}
-                  <i className="fa-solid fa-cart-shopping"></i>
+                  <i className="fa fa-trash"></i>
                   Remove From Wishlist
                 </button>
                 <button
