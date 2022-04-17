@@ -4,9 +4,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
-import { CartProvider } from "./context/CartProvider";
-import { WishlistProvider } from "./context/WishlistProvider";
 import { FilterProvider } from "./context/FilterProvider";
+import { ProductProvider } from "./context/ProductProvider";
 
 // Call make Server
 makeServer();
@@ -21,11 +20,13 @@ makeServer();
 ReactDOM.render(
   <BrowserRouter>
     <FilterProvider>
-      <WishlistProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </WishlistProvider>
+      <ProductProvider>
+        {/* <WishlistProvider> */}
+        {/* <CartProvider> */}
+        <App />
+        {/* </CartProvider> */}
+        {/* </WishlistProvider> */}
+      </ProductProvider>
     </FilterProvider>
   </BrowserRouter>,
   document.getElementById("root")

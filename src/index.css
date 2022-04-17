@@ -99,8 +99,52 @@ code {
 }
 .pricing-col {
   grid-area: pricing-col;
-  /* background-color: var(--primary); */
-} /* - END internals of the cart page - */
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  border: 1px solid var(--secondary);
+  align-items: space-between;
+}
+
+.pricing-calculations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.pricing-card .pricing-heading {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-calculations-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing-card .pricing-total {
+  width: 100%;
+}
+
+.pricing-total .pricing-total-content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.pricing-card-header-details {
+  display: flex;
+  flex: 2 1 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* background-color: var(--primary); */
+/* - END internals of the cart page - */
 
 /* START jugaad wishlist layout */
 .wishlist-parent {
@@ -158,6 +202,7 @@ code {
   flex-direction: column;
 }
 
+
 .login-parent .login-section {
   font: inherit;
   display: flex;
@@ -202,6 +247,81 @@ code {
   cursor: pointer;
 }
 /* END Login page */
+
+/* Start Home Page */
+.hero-overlay-text {
+  font-size: 3rem;
+  color: var(--text-black);
+  background-color: white;
+  opacity: 0.9;
+}
+
+.body .body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.featured-image img {
+  /* max-width: 100%; */
+  width: 100vw;
+}
+
+.featured-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.featured-image .hero-overlay {
+  position: absolute;
+  width: 100%;
+  line-height: 5rem;
+  top: 60%;
+  background-color: var(--white-bg);
+  opacity: 0.8;
+}
+.featured-image .hero-overlay:hover {
+  cursor: pointer;
+}
+.categories {
+  border-radius: 0.5rem;
+}
+
+.featured-image {
+  max-width: 100%;
+}
+
+.card-image.badge {
+  position: relative;
+}
+
+.card-image.badge figure {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  padding: 0.25rem 1rem;
+  top: 3rem;
+  right: 0;
+  background-color: var(--primary-color);
+}
+
+.card-image.badge figure:hover {
+  cursor: pointer;
+}
+#best-seller-button {
+  background-color: var(--primary-color);
+}
+
+.featured-section {
+  border-radius: 0.5rem;
+}
+/* End Home Page */
+
 /* START MEDIA QUERIES */
 /* M - Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
