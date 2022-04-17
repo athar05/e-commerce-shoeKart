@@ -1,5 +1,5 @@
 import React from "react";
-import { useFilter } from "../../context/FilterProvider";
+import { useFilter } from "/context/FilterProvider";
 
 function Filter() {
   const {
@@ -77,7 +77,7 @@ function Filter() {
                         // console.log("input handler")
                       }
                       checked={adidas}
-                    />{" "}
+                    />
                     Adidas
                   </li>
                   <li className="text-md text-primary">
@@ -91,7 +91,7 @@ function Filter() {
                         })
                       }
                       checked={nike}
-                    />{" "}
+                    />
                     Nike
                   </li>
                   <li className="text-md text-primary">
@@ -105,7 +105,7 @@ function Filter() {
                         })
                       }
                       checked={converse}
-                    />{" "}
+                    />
                     Converse
                   </li>
                   <li className="text-md text-primary">
@@ -119,7 +119,7 @@ function Filter() {
                         })
                       }
                       checked={puma}
-                    />{" "}
+                    />
                     Puma
                   </li>
                 </ul>
@@ -137,7 +137,7 @@ function Filter() {
                         })
                       }
                       checked={sortBy === "LOW_TO_HIGH"}
-                    />{" "}
+                    />
                     Low To High
                   </li>
                   <li className="text-md text-primary">
@@ -149,7 +149,7 @@ function Filter() {
                       }
                       checked={sortBy === "HIGH_TO_LOW"}
                       type="checkbox"
-                    />{" "}
+                    />
                     High To Low
                   </li>
                 </ul>

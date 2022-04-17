@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ProductGrid from "../../components/product-grid/ProductGrid";
-import Navbar from "../../components/navigation/Navbar";
-import Filter from "../../components/filter/Filter";
-import Footer from "../../components/footer/Footer";
+import ProductGrid from "/components/product-grid/ProductGrid";
+import Navbar from "/components/navigation/Navbar";
+import Filter from "/components/filter/Filter";
+import Footer from "/components/footer/Footer";
 import axios from "axios";
 
 function ProductPage() {
