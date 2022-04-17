@@ -2,26 +2,20 @@ import React from "react";
 import { useCart } from "/context/CartProvider";
 import { useWishlist } from "/context/WishlistProvider";
 import { useFilter } from "/context/FilterProvider";
+
 import { Link } from "react-router-dom";
+import { useProduct } from "../../context/ProductProvider";
 
 function Product({ products }) {
-  const {
-    cartState: { cart },
-    cartDispatch,
-  } = useCart();
-
-  const {
-    wishlistState: { wishlist },
-    wishlistDispatch,
-  } = useWishlist();
-
   const {
     filterState: { product, sortBy, byStock, byRating, byBrand },
   } = useFilter();
 
-  const { adidas, nike, puma, converse } = byBrand;
 
-  const filteredList = [];
+  const {
+    productState: { cart, wishlist },
+    productDispatch,
+  } = useProduct();
 
   const filteredProducts = () => {
     let sortedProducts = product;
@@ -98,13 +92,10 @@ function Product({ products }) {
                 <button
                   className="button button-icon"
                   onClick={() =>
-                    cartDispatch(
-                      {
-                        type: "ADD_TO_CART",
-                        payload: prod,
-                      },
-                      console.log(cart)
-                    )
+                    productDispatch({
+                      type: "ADD_TO_CART",
+                      payload: prod,
+                    })
                   }
                 >
                   <i className="fa-solid fa-heart"></i>
@@ -122,7 +113,7 @@ function Product({ products }) {
                 <button
                   className="button button-icon"
                   onClick={() =>
-                    wishlistDispatch({
+                    productDispatch({
                       type: "ADD_TO_WISHLIST",
                       payload: prod,
                     })
