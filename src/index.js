@@ -9,23 +9,11 @@ import { ProductProvider } from "./context/ProductProvider";
 
 // Call make Server
 makeServer();
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById("root")
-// );
-
 ReactDOM.render(
   <BrowserRouter>
     <FilterProvider>
       <ProductProvider>
-        {/* <WishlistProvider> */}
-        {/* <CartProvider> */}
         <App />
-        {/* </CartProvider> */}
-        {/* </WishlistProvider> */}
       </ProductProvider>
     </FilterProvider>
   </BrowserRouter>,

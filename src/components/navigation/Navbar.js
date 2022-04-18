@@ -5,15 +5,6 @@ import { useProduct } from "../../context/ProductProvider";
 import { Link } from "react-router-dom";
 
 function Navbar(props) {
-  // const {
-  //   cartState: { cart },
-  //   cartDispatch,
-  // } = useCart();
-  // const {
-  //   wishlistState: { wishlist },
-  //   wishlistDispatch,
-  // } = useWishlist();
-
   const {
     productState: { cart, wishlist },
     productDispatch,
@@ -31,12 +22,12 @@ function Navbar(props) {
         </Link>
 
         <input className="search-bar" type="text" placeholder="Search.." />
-        <a href="./logout.html">
+        <Link to="/login">
           <div className="button button-icon button-header">
             {" "}
-            <span> Logout </span>
+            <span> Login </span>
           </div>
-        </a>
+        </Link>
       </div>
 
       <div className="nav-right">
