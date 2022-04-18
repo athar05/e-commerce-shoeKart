@@ -7,7 +7,7 @@ This is an e-commerce application built using React.js, as a part of neog.camp '
 ### 2 Apr 2022
 
 - Made the first commit on GitHub. Currently the functionality developed is:
-  - home page  with API calls
+  - home page with API calls
   - cart page component
   - filter sompnent used on the product page
   - product page context, reducer & API calls
@@ -16,7 +16,6 @@ This is an e-commerce application built using React.js, as a part of neog.camp '
   - the app has routing paths defined for home, cart, products, wishlist & login page
   - Basic Routes
 
-<<<<<<< HEAD
 ## Screens
 
 ### Home
@@ -30,8 +29,3 @@ This is an e-commerce application built using React.js, as a part of neog.camp '
 ### Login
 
 Live deploy link- https://e-commerce-shoekart.netlify.app/
-=======
-Auth is not done, hence logout & signup pages aren't set up
-
-Live deploy link- ecommerce-shoekart.netlify.app/
->>>>>>> 8ea2ead2f00df30251248ed964512935bda50a50
