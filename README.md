@@ -15,4 +15,16 @@ This is an e-commerce application built using React.js, as a part of neog.camp '
   - checkout page displays a 2 collumn layout
   - the app has routing apaths defined for home, cart, products, wishlist
 
+## Screens
+
+### Home
+
+### Products
+
+### Cart
+
+### Wishlist
+
+### Login
+
 Live deploy link- https://e-commerce-shoekart.netlify.app/
