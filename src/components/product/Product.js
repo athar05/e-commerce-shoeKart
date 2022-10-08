@@ -8,7 +8,6 @@ function Product({ products }) {
     filterState: { product, sortBy, byStock, byRating, byBrand },
   } = useFilter();
 
-
   const {
     productState: { cart, wishlist },
     productDispatch,
@@ -17,45 +16,84 @@ function Product({ products }) {
   const filteredProducts = () => {
     let sortedProducts = product;
 
-    if (sortBy) {
-      sortedProducts = sortedProducts.sort((a, b) =>
-        sortBy === "LOW_TO_HIGH" ? a.price - b.price : b.price - a.price
-      );
-    }
+    let newSortedProductsArray = [];
     if (!byStock) {
-      sortedProducts = sortedProducts.filter((prod) => prod.inStock);
+      newSortedProductsArray.length > 0
+        ? newSortedProductsArray.filter((prod) => prod.inStock)
+        : (sortedProducts = sortedProducts.filter((prod) => prod.inStock));
     }
 
     if (byBrand.adidas) {
-      return sortedProducts.filter(
-        (prod) => "adidas" === prod.brand.toLowerCase()
-      );
+      newSortedProductsArray = [
+        ...newSortedProductsArray,
+        ...sortedProducts.filter(
+          (prod) => "adidas" === prod.brand.toLowerCase()
+        ),
+      ];
+      console.log("adidas", newSortedProductsArray);
     }
 
     if (byBrand.nike) {
-      return sortedProducts.filter(
-        (prod) => "nike" === prod.brand.toLowerCase()
-      );
+      console.log("nike", newSortedProductsArray);
+      newSortedProductsArray = [
+        ...newSortedProductsArray,
+        ...sortedProducts.filter((prod) => "nike" === prod.brand.toLowerCase()),
+      ];
+      console.log("nike", newSortedProductsArray);
     }
 
     if (byBrand.puma) {
-      return sortedProducts.filter(
-        (prod) => "puma" === prod.brand.toLowerCase()
-      );
+      newSortedProductsArray = [
+        ...newSortedProductsArray,
+        ...sortedProducts.filter((prod) => "puma" === prod.brand.toLowerCase()),
+      ];
+      console.log("puma", newSortedProductsArray);
     }
 
     if (byBrand.converse) {
-      return sortedProducts.filter(
-        (prod) => "converse" === prod.brand.toLowerCase()
-      );
+      newSortedProductsArray = [
+        ...newSortedProductsArray,
+        ...sortedProducts.filter(
+          (prod) => "converse" === prod.brand.toLowerCase()
+        ),
+      ];
+      console.log("converse", newSortedProductsArray);
+    }
+
+    if (sortBy === "LOW_TO_HIGH") {
+      console.log(newSortedProductsArray);
+      newSortedProductsArray.length > 0
+        ? (newSortedProductsArray = newSortedProductsArray.sort(
+            (a, b) => a.price - b.price
+          ))
+        : (sortedProducts = sortedProducts.sort((a, b) => a.price - b.price));
+      console.log(newSortedProductsArray);
+    }
+
+    if (sortBy === "HIGH_TO_LOW") {
+      console.log(newSortedProductsArray);
+      newSortedProductsArray.length > 0
+        ? (newSortedProductsArray = newSortedProductsArray.sort(
+            (a, b) => b.price - a.price
+          ))
+        : (sortedProducts = sortedProducts.sort((a, b) => b.price - a.price));
+      console.log(newSortedProductsArray);
     }
 
     if (byRating) {
-      sortedProducts = sortedProducts.filter(
-        (prod) => prod.rating === byRating
-      );
+      console.log(newSortedProductsArray);
+      newSortedProductsArray.length > 0
+        ? (newSortedProductsArray = newSortedProductsArray.filter(
+            (prod) => prod.rating === byRating
+          ))
+        : (sortedProducts = sortedProducts.filter(
+            (prod) => prod.rating === byRating
+          ));
     }
-    return sortedProducts;
+    console.log(sortedProducts, newSortedProductsArray);
+    return newSortedProductsArray.length > 0
+      ? newSortedProductsArray
+      : sortedProducts;
   };
 
   const finalFilteredProducts =
