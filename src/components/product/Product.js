@@ -34,12 +34,10 @@ function Product({ products }) {
     }
 
     if (byBrand.nike) {
-      console.log("nike", newSortedProductsArray);
       newSortedProductsArray = [
         ...newSortedProductsArray,
         ...sortedProducts.filter((prod) => "nike" === prod.brand.toLowerCase()),
       ];
-      console.log("nike", newSortedProductsArray);
     }
 
     if (byBrand.puma) {
@@ -47,7 +45,6 @@ function Product({ products }) {
         ...newSortedProductsArray,
         ...sortedProducts.filter((prod) => "puma" === prod.brand.toLowerCase()),
       ];
-      console.log("puma", newSortedProductsArray);
     }
 
     if (byBrand.converse) {
@@ -57,31 +54,25 @@ function Product({ products }) {
           (prod) => "converse" === prod.brand.toLowerCase()
         ),
       ];
-      console.log("converse", newSortedProductsArray);
     }
 
     if (sortBy === "LOW_TO_HIGH") {
-      console.log(newSortedProductsArray);
       newSortedProductsArray.length > 0
         ? (newSortedProductsArray = newSortedProductsArray.sort(
             (a, b) => a.price - b.price
           ))
         : (sortedProducts = sortedProducts.sort((a, b) => a.price - b.price));
-      console.log(newSortedProductsArray);
     }
 
     if (sortBy === "HIGH_TO_LOW") {
-      console.log(newSortedProductsArray);
       newSortedProductsArray.length > 0
         ? (newSortedProductsArray = newSortedProductsArray.sort(
             (a, b) => b.price - a.price
           ))
         : (sortedProducts = sortedProducts.sort((a, b) => b.price - a.price));
-      console.log(newSortedProductsArray);
     }
 
     if (byRating) {
-      console.log(newSortedProductsArray);
       newSortedProductsArray.length > 0
         ? (newSortedProductsArray = newSortedProductsArray.filter(
             (prod) => prod.rating === byRating
@@ -90,7 +81,7 @@ function Product({ products }) {
             (prod) => prod.rating === byRating
           ));
     }
-    console.log(sortedProducts, newSortedProductsArray);
+
     return newSortedProductsArray.length > 0
       ? newSortedProductsArray
       : sortedProducts;
