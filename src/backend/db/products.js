@@ -82,4 +82,22 @@ export const products = [
     inStock: true,
     rating: "5",
   },
+  {
+    id: uuid(),
+    name: "Backcourt Mid-Top Lace-Up Casual Shoes",
+    brand: "Puma",
+    price: "3099",
+    img: "assets/images/puma-casual-shoes.jpg",
+    inStock: true,
+    rating: "2",
+  },
+  {
+    id: uuid(),
+    name: "Adidas Forum Mid-shoes",
+    brand: "Adidas",
+    price: "3599",
+    img: "assets/images/adidas-forum-mid-shoes.jpg",
+    inStock: true,
+    rating: "1",
+  },
 ];

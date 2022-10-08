@@ -13,7 +13,6 @@ function FilterReducer(filterState, action) {
     case "FILTER_BY_STOCK":
       return { ...filterState, byStock: !filterState.byStock };
     case "SHOW_ADIDAS":
-      console.log("adidasss");
       return {
         ...filterState,
         byBrand: {
